@@ -1,0 +1,9 @@
+[Unit]
+Description=UPower plotting
+
+[Service]
+Type=simple
+ExecStart=/etc/systemd/script_batt.sh 
+
+[Install]
+WantedBy=multi-user.target
