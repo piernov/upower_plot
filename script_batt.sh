@@ -14,6 +14,6 @@ while true; do
 	time_to_empty=$(echo "${upower}" | grep "time to empty:" | sed "s/    time to empty:       //")
 	percentage=$(echo "${upower}" | grep "percentage:" | sed "s/    percentage:          //")
 	capacity=$(echo "${upower}" | grep "capacity:" | sed "s/    capacity:            //")
-	echo "${current_date};${current_time};${state};${energy};${energy_full};${energy_rate};${voltage};${time_to_empty};${percentage};${capacity}" >> /etc/systemd/upower-plot.csv
+	echo "${current_date} ${current_time};${state};${energy};${energy_full};${energy_rate};${voltage};${time_to_empty};${percentage};${capacity}" >> /etc/systemd/upower-plot.csv
 	sleep 5
 done

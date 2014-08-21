@@ -16,14 +16,14 @@ set autoscale y2;
 
 set bmargin at screen 0.15;
 
-set xtics rotate by 35 offset -5,-2.2;
+set xtics rotate by 35 offset -2,-1.5;
 set ytics nomirror;
 set y2tics;
 
 set datafile separator ';';
 set decimalsign locale;
-set timefmt '%H:%M:%S';
+set timefmt '%m/%d/%y %H:%M:%S';
 set xdata time;
 set style data lines;
-plot '/etc/systemd/upower-plot.csv' using 2:9 axes x1y2 title 'Charge (%)', '/etc/systemd/upower-plot.csv' using 2:4 title 'Charge (Wh)', '/etc/systemd/upower-plot.csv' using 2:6 title 'Consommation (W)', '/etc/systemd/upower-plot.csv' using 2:7 title 'Tension (V)';
+plot '/etc/systemd/upower-plot.csv' using 1:8 axes x1y2 title 'Charge (%)', '/etc/systemd/upower-plot.csv' using 1:3 title 'Charge (Wh)', '/etc/systemd/upower-plot.csv' using 1:5 title 'Consommation (W)', '/etc/systemd/upower-plot.csv' using 1:6 title 'Tension (V)';
 "
